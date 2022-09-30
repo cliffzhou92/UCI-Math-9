@@ -1,0 +1,251 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9622,        243]
+NotebookOptionsPosition[      8633,        216]
+NotebookOutlinePosition[      9105,        234]
+CellTagsIndexPosition[      9062,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 8", "Title",
+ CellChangeTimes->{{3.846806297025429*^9, 3.846806300097587*^9}, {
+  3.846963977513446*^9, 
+  3.846963978650302*^9}},ExpressionUUID->"eb60730a-96f8-4582-b70e-\
+7e3466b00f27"],
+
+Cell["your name and id", "Text",
+ CellChangeTimes->{{3.846807981189945*^9, 
+  3.846807983205055*^9}},ExpressionUUID->"e2925e52-38f2-4115-8034-\
+90ef1de97dac"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1: The Collatz conjecture", "Section",
+ CellChangeTimes->{{3.846806312503166*^9, 3.846806322989305*^9}, {
+  3.846806590808785*^9, 3.8468066010563717`*^9}, {3.8468070893389883`*^9, 
+  3.846807090613752*^9}},ExpressionUUID->"cc65ffc9-500f-4f33-8307-\
+23651209848b"],
+
+Cell[TextData[{
+ "Defined sequence with the following recursive formulas\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", 
+     RowBox[{"k", "+", "1"}]], "=", 
+    RowBox[{
+     RowBox[{"f", "(", 
+      SubscriptBox["x", "k"], ")"}], "=", 
+     TagBox[GridBox[{
+        {"\[Piecewise]", GridBox[{
+           {
+            RowBox[{
+             RowBox[{
+              SubscriptBox["x", "k"], "/", "2"}], ","}], 
+            RowBox[{"if", " ", 
+             SubscriptBox["x", "k"], " ", "is", " ", "even"}]},
+           {
+            RowBox[{
+             RowBox[{"3", 
+              SubscriptBox["x", "k"]}], "+", "1."}], 
+            RowBox[{"if", " ", 
+             SubscriptBox["x", "k"], " ", "is", " ", "odd"}]}
+          },
+          AllowedDimensions->{2, Automatic},
+          Editable->True,
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+          GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.84]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}},
+          Selectable->True]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.35]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      "Piecewise",
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False,
+      StripWrapperBoxes->True]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "80a79519-9178-41e0-a0bc-ac34a6c35421"],
+ "\nand initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "1"], "=", "n"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d451e6f3-ea80-44f8-ada8-e894878ad22f"],
+ ". We terminate the sequence whenever the value 1 is encountered in \
+iteration, and the total length of generated sequence (including this 1 and \
+the initial value) is called the ",
+ StyleBox["stopping time. \n\n",
+  FontWeight->"Bold"],
+ "The famous Collataz conjecture states:\n\[OpenCurlyDoubleQuote]",
+ StyleBox["Regardless of the initial value n chosen, the stopping time is \
+always finite.",
+  FontSlant->"Italic"],
+ " \[CloseCurlyDoubleQuote]\n\nUntil today, this conjecture has not been \
+rigorously proved, while so far no counter-example has ever been found. Now \
+do the following in Mathematica to explore this conjecture:\n1. Define a \
+function named CollatzStoppingTime, whose input is the initial value n, and \
+output is the stopping time. (Hint: There are many ways to do it, and the \
+convenient and elegant way might be using NestWhileList)\n2. Use the function \
+to generate a list named stoppingtimeList, whose k-th element corresponds to \
+the stopping time of initial value k, and the total length is 10^5 (may take \
+some time to run). Suppress output at this step.\n3. Plot the histogram of \
+stoppingList, to see the distribution of stopping times.\n\n",
+ StyleBox["References: ",
+  FontSlant->"Italic"],
+ StyleBox[ButtonBox["Wikipedia link",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://en.wikipedia.org/wiki/Collatz_conjecture"], None},
+  ButtonNote->"https://en.wikipedia.org/wiki/Collatz_conjecture"],
+  FontSlant->"Italic"],
+ StyleBox[" and ",
+  FontSlant->"Italic"],
+ StyleBox[ButtonBox["Lecture Videos ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.youtube.com/playlist?list=\
+PLHfGN68wSbbJKiS0l9s0DAOtAM0icOywc"], None},
+  ButtonNote->
+   "https://www.youtube.com/playlist?list=PLHfGN68wSbbJKiS0l9s0DAOtAM0icOywc"],
+  FontSlant->"Italic"],
+ StyleBox["from Professor Christopher Davis (video 7 and 8 in playlist)",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.846807954721643*^9, 3.846807969694418*^9}, {
+  3.846808154234008*^9, 3.8468082256160593`*^9}, {3.8468083042749453`*^9, 
+  3.846808311938833*^9}, {3.846808428019663*^9, 3.84680845346271*^9}, {
+  3.8468097657611513`*^9, 3.8468099424432087`*^9}, {3.846809974416233*^9, 
+  3.8468100215175333`*^9}, {3.8468100952283287`*^9, 3.84681017795105*^9}, {
+  3.846810225849938*^9, 3.84681039407452*^9}, {3.846810429311756*^9, 
+  3.846810442248476*^9}, {3.8468105140014343`*^9, 3.846810586995461*^9}, {
+  3.846811144312128*^9, 3.8468111728233023`*^9}, {3.846811205847403*^9, 
+  3.8468112236281033`*^9}, {3.8468112720312853`*^9, 
+  3.8468112891309977`*^9}},ExpressionUUID->"e3259bb1-70b3-4f82-9dd6-\
+ecba4f0728a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2: The Harmonic Mean", "Section",
+ CellChangeTimes->{{3.846811124853753*^9, 
+  3.8468111323598757`*^9}},ExpressionUUID->"5dd16675-9173-47d9-bae3-\
+3caef45a1b9f"],
+
+Cell[TextData[{
+ "Given a list  {",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["a", "1"], ",", 
+    SubscriptBox["a", "2"], ",", "..", ",", 
+    SubscriptBox["a", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1bdd8a96-53ab-4e51-b5cc-a55d13d8d9f4"],
+ "}, its ",
+ ButtonBox["harmonic mean",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://en.wikipedia.org/wiki/Harmonic_mean"], None},
+  ButtonNote->"https://en.wikipedia.org/wiki/Harmonic_mean"],
+ " is defined as  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["n", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "1"}], "n"], 
+     FractionBox["1", 
+      SubscriptBox["a", "k"]]}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ca2fea33-6b2e-4652-b230-8f363c622cd1"],
+ ". Now define three functions hmean1, hmean2 and hmean3, all with the input \
+as a given list and output the harmonic mean. The requirements are as \
+follows:\n\n1. hmean1 uses the combination of builtin Mathematica functions, \
+and in the function you can only use Length, Total and division operator (/).\
+\n2. hmean2 uses functional programming, and in the function you can only use \
+these elements: builtin-in functions of Length, Power, Times and Plus, \
+operators of Map (/@) and Apply(@@), Pure Functions (#&),  curly brackets {}, \
+parenthesis (), and number -1.\n3. hmean3 uses control flows, and you can \
+pick Do/For/While as you like.\n\nAfter defining the function, do the \
+followings:\n1. Test the correctness of all your functions with some small \
+list, say {a,b,c,d}.\n2. Compare the running times of different functions \
+with a large list, for instance Range[10^5]. Also compare with running time \
+the built-in Mathematica to calculate harmonic mean directly (Hint: find \
+function name with natural language input). Insert the text cell to write \
+down your observations."
+}], "Text",
+ CellChangeTimes->{{3.8468114704872932`*^9, 3.846811514877172*^9}, {
+  3.8468118526327677`*^9, 3.846811916755919*^9}, {3.8468120043441677`*^9, 
+  3.846812500683869*^9}, {3.846812665269225*^9, 3.846812709733328*^9}, {
+  3.8468127999523907`*^9, 3.846812799953518*^9}, {3.8468131270245667`*^9, 
+  3.846813129408086*^9}, {3.846813164693657*^9, 
+  3.846813211625046*^9}},ExpressionUUID->"2529da9c-cffb-430e-8393-\
+b5897d711ec1"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{Full, Full},
+WindowMargins->{{47, Automatic}, {21, Automatic}},
+TaggingRules->Association["TryRealOnly" -> False],
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2b0905b6-b071-45bb-87e1-1824804ad6e9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 202, 4, 98, "Title",ExpressionUUID->"eb60730a-96f8-4582-b70e-7e3466b00f27"],
+Cell[785, 28, 158, 3, 35, "Text",ExpressionUUID->"e2925e52-38f2-4115-8034-90ef1de97dac"],
+Cell[CellGroupData[{
+Cell[968, 35, 277, 4, 67, "Section",ExpressionUUID->"cc65ffc9-500f-4f33-8307-23651209848b"],
+Cell[1248, 41, 4791, 112, 420, "Text",ExpressionUUID->"e3259bb1-70b3-4f82-9dd6-ecba4f0728a2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6076, 158, 175, 3, 67, "Section",ExpressionUUID->"5dd16675-9173-47d9-bae3-3caef45a1b9f"],
+Cell[6254, 163, 2351, 49, 327, "Text",ExpressionUUID->"2529da9c-cffb-430e-8393-b5897d711ec1"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

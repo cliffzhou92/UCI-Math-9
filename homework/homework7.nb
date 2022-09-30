@@ -1,0 +1,420 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15961,        412]
+NotebookOptionsPosition[     14029,        373]
+NotebookOutlinePosition[     14533,        392]
+CellTagsIndexPosition[     14490,        389]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 7", "Title",
+ CellChangeTimes->{{3.8462730286418543`*^9, 
+  3.8462730321859503`*^9}},ExpressionUUID->"897e8a8f-7982-41b4-8bb0-\
+ec91e14a4232"],
+
+Cell[TextData[StyleBox["your name and id",
+ FontSlant->"Italic"]], "Text",
+ CellChangeTimes->{{3.846273035833582*^9, 
+  3.846273040658012*^9}},ExpressionUUID->"b86633ca-f882-40f8-a405-\
+d695fcbe42ce"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1: Solving Mathematical Problems", "Section",
+ CellChangeTimes->{{3.846273082457212*^9, 3.8462731086155577`*^9}, {
+  3.84628757117598*^9, 3.846287572375164*^9}, {3.8462876391003637`*^9, 
+  3.84628764017356*^9}},ExpressionUUID->"2f0aa570-a893-473a-90c3-\
+03aafeaa4b17"],
+
+Cell["\<\
+Insert the input cell immediately after each instruction to write the code. \
+Remember that you can always use natural language input to search for \
+commands,but please replace them with the formal mathematical code.\
+\>", "Text",
+ CellChangeTimes->{
+  3.846287650784328*^9, {3.8462877651142073`*^9, 3.8462878342391367`*^9}, {
+   3.846287890586959*^9, 3.8462878909070168`*^9}, 3.8462885250377607`*^9, 
+   3.8462886713637753`*^9},ExpressionUUID->"dc960587-c0ba-477d-ab7c-\
+5f85806a38f6"],
+
+Cell[TextData[{
+ "Solve the  equation ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["a", "TI"], 
+         SuperscriptBox["sin", "2"], 
+         RowBox[{"(", 
+           StyleBox["x", "TI"], ")"}], "+", 
+         StyleBox["b", "TI"], "sin", 
+         RowBox[{"(", 
+           StyleBox["x", "TI"], ")"}], "+", 
+         StyleBox["c", "TI"], "\[LongEqual]", "0"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "a\\sin^{2}(x)+b\\sin(x)+c=0", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e7f572d6-a78b-4b0f-9a9f-8e87bae7eea7"],
+ " where unknown is x (first term means a times the square of sin(x)).  Also \
+display the ",
+ StyleBox["fullform",
+  FontWeight->"Bold"],
+ " of the output. (you can use two input cells, one for solve equation, one \
+for fullform)"
+}], "Item",
+ CellChangeTimes->{{3.84627360053297*^9, 3.846273612668634*^9}, {
+  3.846273644326454*^9, 3.8462737713592653`*^9}, {3.846275019324625*^9, 
+  3.8462751218600273`*^9}, {3.846287851729958*^9, 3.84628786616038*^9}, {
+  3.8462880702374487`*^9, 
+  3.8462880921569357`*^9}},ExpressionUUID->"c9954faf-2869-4b0e-860f-\
+eb811e486db5"],
+
+Cell[TextData[{
+ "Find the limit ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"n", "\[RightArrow]", "\[Infinity]"}]], " ", 
+     TemplateBox[Association["boxes" -> FormBox[
+         FractionBox[
+          RowBox[{
+            SqrtBox[
+             StyleBox["n", "TI"]], 
+            SuperscriptBox[
+             RowBox[{"(", 
+               FractionBox[
+                StyleBox["n", "TI"], 
+                StyleBox["e", "TI"]], ")"}], 
+             StyleBox["n", "TI"]]}], 
+          RowBox[{
+            StyleBox["n", "TI"], "!"}]], TraditionalForm], "errors" -> {}, 
+       "input" -> "\\frac{\\sqrt{n}(\\frac{n}{e})^n}{n!}", "state" -> "Boxes"],
+      "TeXAssistantTemplate"]}]}], TraditionalForm]],ExpressionUUID->
+  "a63b3c66-324e-4618-8f65-173878844ead"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["n", "TI"], "!"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "n!", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c808f3ca-0af9-453a-877b-883234f20623"],
+ " is the factorial of n, and e is the base of the natural logarithm. If the \
+output is shown in symbolic form, also display its numerical value (again, \
+you have two input cells, one for finding limit, and one for displaying \
+numeric form)"
+}], "Item",
+ CellChangeTimes->{{3.8462737970497007`*^9, 3.846273806116612*^9}, {
+  3.8462756202496033`*^9, 3.846275636461985*^9}, {3.846275685005149*^9, 
+  3.846275749909564*^9}, {3.8462758347265253`*^9, 3.846275854898834*^9}, {
+  3.846275961905356*^9, 3.846275995263036*^9}, {3.846289311559086*^9, 
+  3.846289318566925*^9}, {3.846289565183526*^9, 3.8462896187648487`*^9}, {
+  3.8462897870016212`*^9, 
+  3.846289787209614*^9}},ExpressionUUID->"1beba552-03fb-4b11-af31-\
+a5ec8a2e12a8"],
+
+Cell[TextData[{
+ "Solve the anti-derivative (indefinite integral) problem ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["a", "2"]}]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "58cfb4a3-bb86-4294-b1d4-2c4894f8e11a"],
+ "   where a is a symbol (don\[CloseCurlyQuote]t worry about constant C in \
+the answer)"
+}], "Item",
+ CellChangeTimes->{{3.846276008497754*^9, 3.8462760422215443`*^9}, {
+  3.846276973429881*^9, 3.8462769809175777`*^9}, {3.8462771131731167`*^9, 
+  3.846277191371142*^9}, {3.846278757992655*^9, 3.8462787770478783`*^9}, {
+  3.8462896610076513`*^9, 
+  3.8462896631433897`*^9}},ExpressionUUID->"c3159a0b-a713-4921-bd2c-\
+abd823267919"],
+
+Cell[TextData[{
+ "Solve the first-order ODE ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox["dy", "dx"], "+", 
+     RowBox[{
+      RowBox[{"p", "(", "x", ")"}], "y"}]}], "=", 
+    RowBox[{"q", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6d8f85bc-de73-4803-bbde-60d57888d7e8"],
+ "where p(x) and q(x) are continuous functions. If you\[CloseCurlyQuote]re \
+not familiar with ODE, refer to",
+ ButtonBox[" this material ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://tutorial.math.lamar.edu/classes/de/linear.aspx"], None},
+  ButtonNote->"https://tutorial.math.lamar.edu/classes/de/linear.aspx"],
+ "for the background."
+}], "Item",
+ CellChangeTimes->{{3.846278199866828*^9, 3.84627824549257*^9}, {
+  3.8462784775392847`*^9, 3.846278491385795*^9}, {3.846289749960801*^9, 
+  3.84628974996268*^9}},ExpressionUUID->"5763bec4-5668-47ab-9048-\
+b3abb4431141"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2 : Validating Taylor\[CloseCurlyQuote]s Series ", "Section",
+ CellChangeTimes->{{3.846278527268202*^9, 3.8462785338520737`*^9}, {
+   3.8462785996818867`*^9, 3.84627860208073*^9}, {3.846279867044199*^9, 
+   3.846279884667651*^9}, 3.846283259218623*^9, {3.8462855126541233`*^9, 
+   3.846285527406616*^9}, 
+   3.846288369006928*^9},ExpressionUUID->"3b45c01f-eacd-4b39-bd68-\
+f147167baa03"],
+
+Cell[TextData[{
+ "It\[CloseCurlyQuote]s know that we can use Taylor\[CloseCurlyQuote]s series \
+(infinite order polynomials) to approximate complicated functions.\nFor \
+sin(x), we have ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sin", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"k", "=", "1"}], 
+       RowBox[{"+", "\[Infinity]"}]], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], 
+        RowBox[{"k", "-", "1"}]], 
+       FractionBox[
+        SuperscriptBox["x", 
+         RowBox[{
+          RowBox[{"2", "k"}], "-", "1"}]], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", "k"}], "-", "1"}], ")"}], "!"}]]}]}], "=", 
+     RowBox[{
+      RowBox[{"x", "-", 
+       FractionBox[
+        SuperscriptBox["x", "3"], 
+        RowBox[{"3", "!"}]], "+", 
+       FractionBox[
+        SuperscriptBox["x", "5"], 
+        RowBox[{"5", "!"}]], "-", 
+       FractionBox[
+        SuperscriptBox["x", "7"], 
+        RowBox[{"7", "!"}]], "+"}], "..."}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d5602c17-faa2-4488-9410-2a7259f89809"],
+ "   where k! means factorial of k.  Do the following tasks to validate this \
+equation. Insert the input cell immediately after each numbered instruction \
+to write the code."
+}], "Text",
+ CellChangeTimes->{{3.846285547779443*^9, 3.8462856494338837`*^9}, {
+  3.84628571478646*^9, 3.8462859368212233`*^9}, {3.8462875833276873`*^9, 
+  3.846287610933872*^9}, {3.846287776362598*^9, 
+  3.846287777593913*^9}},ExpressionUUID->"62dc6dbc-01f2-4cbc-b88d-\
+69e55db21c07"],
+
+Cell[TextData[{
+ "Create a length 10 list, whose k-th element is the k-th term in the Taylor\
+\[CloseCurlyQuote]s series of sin(x) above, i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], 
+     RowBox[{"k", "-", "1"}]], 
+    FractionBox[
+     SuperscriptBox["x", 
+      RowBox[{
+       RowBox[{"2", "k"}], "-", "1"}]], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "k"}], "-", "1"}], ")"}], "!"}]]}], TraditionalForm]],
+  ExpressionUUID->"fd6f028e-28b5-4fc1-9195-6b599ca7efbf"],
+ ". It\[CloseCurlyQuote]s no problem if your output evaluated the factorial \
+term."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.846286080591394*^9, 3.846286138004161*^9}, {
+  3.8462887758376503`*^9, 
+  3.846288793258716*^9}},ExpressionUUID->"a3ebed02-8652-41f2-9ba8-\
+8795c8cb521e"],
+
+Cell[TextData[{
+ "Create a length 10 list named ",
+ StyleBox["myList",
+  FontWeight->"Bold"],
+ ", whose n-th element is sum of first n terms in the \
+Taylor\[CloseCurlyQuote]s series of sin(x) above i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], "n"], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"k", "-", "1"}]], 
+     FractionBox[
+      SuperscriptBox["x", 
+       RowBox[{
+        RowBox[{"2", "k"}], "-", "1"}]], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", "k"}], "-", "1"}], ")"}], "!"}]]}]}], TraditionalForm]],
+  ExpressionUUID->"8da36272-f953-4ae8-b4ce-1a1b1bdd1caf"],
+ "(see the hint in Lecture on how to do this and of course there are many \
+ways.The only requirement is do not directly type every term of the list \
+manually but use certain commands instead.)"
+}], "ItemNumbered",
+ CellChangeTimes->{{3.846286157933036*^9, 3.846286169602701*^9}, {
+  3.846286250685053*^9, 3.846286256773089*^9}, {3.84628665777024*^9, 
+  3.846286725683694*^9}, {3.846287116547104*^9, 3.846287120906843*^9}, {
+  3.846290161977599*^9, 
+  3.846290191438075*^9}},ExpressionUUID->"301c5a62-5a8b-4340-9219-\
+218513eeb323"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+ Now run the code below to explore how the polynomials generated in last task \
+approximate to the function sin(x). Insert a new text cell after the figure \
+shown, and write down your observations as you manipulate the change of n.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.84627932019215*^9, 3.846279329308778*^9}, {
+   3.846279378281769*^9, 3.84627938644004*^9}, {3.846279524512136*^9, 
+   3.846279620339172*^9}, {3.846280534052594*^9, 3.8462805399075947`*^9}, {
+   3.846280579883555*^9, 3.846280580213832*^9}, {3.8462807827377987`*^9, 
+   3.8462807883167677`*^9}, {3.8462808272529793`*^9, 3.846280828821809*^9}, {
+   3.846281040003292*^9, 3.84628104021987*^9}, {3.846281081408978*^9, 
+   3.8462811143340797`*^9}, {3.846281165204439*^9, 3.8462811804126596`*^9}, {
+   3.846281338162636*^9, 3.846281382850432*^9}, {3.84628227567432*^9, 
+   3.846282334880022*^9}, {3.846282566872136*^9, 3.8462826085491047`*^9}, {
+   3.846282662268222*^9, 3.8462827042178497`*^9}, {3.846282761588924*^9, 
+   3.8462828337623587`*^9}, {3.846286933726026*^9, 3.846287100875536*^9}, {
+   3.846287141584998*^9, 3.846287142210018*^9}, {3.846287485898292*^9, 
+   3.8462874863707457`*^9}, {3.846287516505941*^9, 3.8462875253053627`*^9}, {
+   3.846287563096488*^9, 3.846287563656331*^9}, 
+   3.84628832346838*^9},ExpressionUUID->"3834a960-098a-4d67-8bf5-\
+1d4db399e088"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"myList", "[", 
+         RowBox[{"[", "n", "]"}], "]"}], ",", " ", 
+        RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "0", ",", " ", "Pi"}], "}"}], ",", " ", 
+      RowBox[{"PlotLegends", " ", "->", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"myList", "[", 
+          RowBox[{"[", "n", "]"}], "]"}], ",", " ", "\"\<Sin(x)\>\""}], 
+        "}"}]}], ",", " ", 
+      RowBox[{"AspectRatio", " ", "->", " ", "0.2"}], ",", " ", 
+      RowBox[{"ImageSize", " ", "->", " ", "Full"}]}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", " ", "1", ",", " ", 
+      RowBox[{"Length", "[", "myList", "]"}], ",", " ", "1"}], "}"}]}], "]"}],
+   " "}]], "Input",
+ CellChangeTimes->{{3.846287102244348*^9, 3.8462871280833406`*^9}, {
+  3.846287447581893*^9, 3.8462874628050117`*^9}},
+ CellLabel->"In[99]:=",ExpressionUUID->"e49dba1c-2f2e-402d-b705-8fbed3ff10e4"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use Mathematica command to find the Tylor series of sin(x), whose maximum \
+order should be the same with the last polynomial in myList.",
+ StyleBox[" Hint: use natural language input to search the basic command, and \
+then adjust parameters to satisfy the requirement here.The final answer \
+should be the formal Mathematica command instead of the result of natural \
+language input.",
+  FontSlant->"Italic"]
+}], "ItemNumbered",
+ CellChangeTimes->{{3.846287378867938*^9, 3.846287436124724*^9}, {
+  3.8462884703121843`*^9, 3.8462885149023447`*^9}, {3.846288587281995*^9, 
+  3.846288680895937*^9}},ExpressionUUID->"338e6f0a-b60f-4c63-9618-\
+e49202a7d822"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{Full, Full},
+WindowMargins->{{13, Automatic}, {Automatic, -741}},
+TaggingRules->Association["TryRealOnly" -> False],
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ba949e10-0e14-4350-ba55-e6945df17a58"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 157, 3, 146, "Title",ExpressionUUID->"897e8a8f-7982-41b4-8bb0-ec91e14a4232"],
+Cell[740, 27, 200, 4, 53, "Text",ExpressionUUID->"b86633ca-f882-40f8-a405-d695fcbe42ce"],
+Cell[CellGroupData[{
+Cell[965, 35, 282, 4, 101, "Section",ExpressionUUID->"2f0aa570-a893-473a-90c3-03aafeaa4b17"],
+Cell[1250, 41, 497, 9, 88, "Text",ExpressionUUID->"dc960587-c0ba-477d-ab7c-5f85806a38f6"],
+Cell[1750, 52, 1210, 30, 82, "Item",ExpressionUUID->"c9954faf-2869-4b0e-860f-eb811e486db5"],
+Cell[2963, 84, 1873, 45, 118, "Item",ExpressionUUID->"1beba552-03fb-4b11-af31-a5ec8a2e12a8"],
+Cell[4839, 131, 833, 21, 55, "Item",ExpressionUUID->"c3159a0b-a713-4921-bd2c-abd823267919"],
+Cell[5675, 154, 929, 24, 89, "Item",ExpressionUUID->"5763bec4-5668-47ab-9048-b3abb4431141"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6641, 183, 401, 6, 101, "Section",ExpressionUUID->"3b45c01f-eacd-4b39-bd68-f147167baa03"],
+Cell[7045, 191, 1669, 47, 138, "Text",ExpressionUUID->"62dc6dbc-01f2-4cbc-b88d-69e55db21c07"],
+Cell[8717, 240, 854, 25, 96, "ItemNumbered",ExpressionUUID->"a3ebed02-8652-41f2-9ba8-8795c8cb521e"],
+Cell[9574, 267, 1265, 34, 127, "ItemNumbered",ExpressionUUID->"301c5a62-5a8b-4340-9219-218513eeb323"],
+Cell[CellGroupData[{
+Cell[10864, 305, 1356, 20, 80, "ItemNumbered",ExpressionUUID->"3834a960-098a-4d67-8bf5-1d4db399e088"],
+Cell[12223, 327, 1091, 27, 78, "Input",ExpressionUUID->"e49dba1c-2f2e-402d-b705-8fbed3ff10e4"]
+}, Open  ]],
+Cell[13329, 357, 672, 12, 111, "ItemNumbered",ExpressionUUID->"338e6f0a-b60f-4c63-9618-e49202a7d822"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
