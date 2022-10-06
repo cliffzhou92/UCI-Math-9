@@ -1,6 +1,6 @@
 # UCI-MATH 9: Introduction to Programming for Numerical Analysis
 
-Math 9 serves as the introductory course in programming, mainly targeted for the students with mathematical background. We will focus on the basic programming concepts and software usage in Matlab and Python, and apply them to solve practical problems in numerical analysis. We hope that the skills learned in this course can be helpful to students’ future learning and research career in mathematics, both on the theoretical and applied tracks.
+Math 9 serves as the introductory course in programming, mainly targeted for the students with mathematical background. We will focus on the basic programming concepts and software usage in Matlab and Mathematica, and apply them to solve practical problems in numerical analysis. We hope that the skills learned in this course can be helpful to students’ future learning and research career in mathematics, both on the theoretical and applied tracks.
 
 *(Updated Spring 2022)*
 
